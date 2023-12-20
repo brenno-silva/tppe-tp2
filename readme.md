@@ -10,42 +10,30 @@ Repositório para trabalho 2 da disciplina de TÉCNICAS DE PROGRAMAÇÃO EM PLAT
 Matrícula | Nome
 |--|--|
 190025379 | Brenno Oliveira Silva
+190047968 | Paulo Vitor Silva Abi Acl
 
 ## Simplicidade
-- **Descrição:** Um código simples é fácil de entender e implementar, sendo consistente e coerente. Seu impacto está presente na estruturação dos códigos, onde seu tamanho deve ser o menor possível, buscando realizar o máximo com o mínimo.
-- **Característica com Maus-cheiros:**
-  - Código duplicado: Um código simples busca não possuir código duplicado.
-  - Método longo: A simplicidade pode ser utilizada para quebrar métodos longos em menores e de melhor entendimento.
-- **Operação de refatoração:**
-  - Para alcançar a simplicidade, a técnica de "Extrair Função" pode ser útil, isolando trechos de códigos em partes menores, facilitando a compreensão.
+- **Descrição:** A simplicidade é uma das características mais importantes de um bom projeto de software. Ela se refere à facilidade com que o código pode ser lido e compreendido. Um código simples é direto, conciso e não contém elementos desnecessários ou redundantes, é escrito de uma maneira que é fácil de entender, mesmo para alguém que não está familiarizado com o projeto. Seu impacto está presente na estruturação dos códigos, onde seu tamanho deve ser o menor possível, buscando realizar o máximo com o mínimo.
+- **Característica com Maus-cheiros:** Os maus-cheiros de código indicam problemas no design do software, podendo dificultar a compreensão e manutenção do código Um exemplo de mau-cheiro de código que viola a simplicidade é o “Método longo”. Métodos longos são se complexos e desafiadores de entender, pois podem abrigar uma quantidade excessiva de lógica, propiciando a presença de duplicação de código. Outro exemplo é o “Classe Grande”, que é uma classe que tenta fazer mais do que ela deveria e acaba sendo grande e complicada. Essas classes são difíceis de entender e manter, e geralmente são um sinal de que a classe deve ser dividida em classes menores e mais simples.
+- **Operação de refatoração:** Existem algumas operações de refatoração que podem ser usadas para melhorar a simplicidade do código. Como exemplo, a técnica de refatoração conhecida como "Extrair Método" pode ser útil para lidar com a questão do "Método Longo". Esse processo implica na criação de um novo método isolando trechos de códigos em partes menores. Outra estratégia de refatoração que tenta resolver o problema da "Classe Grande" é "Extrair Classe", que se revela eficaz ao dividir uma "Classe Extensa" em classes menores e mais acessíveis.
 
 ## Elegância
-- **Descrição:** Costumeiramente está relacionada à simplicidade, com foco na estruturação de um código onde os fluxos sejam coesos, com partes complementares sem acoplamentos que impactem áreas indevidas.
-- **Característica com Maus-cheiros:**
-  - Classe inchada: Um código elegante não utiliza classes grandes, pois o excesso de variáveis pode evidenciar baixa coesão.
-  - Generalidade especulativa: A utilização de generalidade especulativa pode mostrar que trechos de códigos são desnecessários ou poderiam estar inseridos em outros locais.
-- **Operação de refatoração:**
-  - A remoção de parâmetros pode ser uma técnica válida para manter apenas os parâmetros necessários nos métodos.
+- **Descrição:** Costumeiramente está relacionada à simplicidade, com foco na estruturação de um código onde os fluxos sejam coesos, com partes complementares sem acoplamentos que impactem áreas indevidas, facilitam a leitura, manutenção e compreensão do código-fonte. Códigos elegantes são geralmente bem estruturados, utilizam boas práticas de programação e seguem convenções que tornam o código mais legível. 
+- **Característica com Maus-cheiros:** Na busca pela elegância em projetos de software, é importante evitar a presença de classes inchadas, pois estas comprometem a qualidade do código. Um código elegante prescinde do uso de classes extensas, uma vez que o excesso de variáveis em uma única classe pode evidenciar uma baixa coesão, tornando a compreensão e manutenção mais desafiadoras. Outro aspecto relevante é a necessidade de evitar a generalidade especulativa, uma prática que pode indicar a presença de trechos de código desnecessários ou que poderiam ser mais apropriadamente localizados em outras partes do sistema.
+- **Operação de refatoração:** Para operações de refatoração que contribuem com a elegância do código A remoção de parâmetros surge como uma técnica válida para manter apenas os parâmetros essenciais nos métodos.
 
 ## Modularidade
-- **Descrição:** A modularidade está diretamente ligada à alta coesão e baixo acoplamento, dividindo problemas em partes menores que, juntas, formam uma solução completa.
-- **Característica com Maus-cheiros:**
-  - Método longo: A modularidade pode ser utilizada para quebrar métodos longos em menores.
-  - Classe inchada: Um código modular decompõe uma classe com muitas responsabilidades.
-- **Operação de refatoração:**
-  - Pode ser utilizada a extração de interfaces, permitindo a alteração da interface para melhor atender e organizar o uso ao avaliar a utilização da classe.
-
+- **Descrição:** A modularidade representa uma peça fundamental em um design de software robusto. Está diretamente ligada à alta coesão, onde os componentes de um módulo estão fortemente relacionados entre si, compartilhando uma finalidade comum. Ao mesmo tempo visa manter um baixo acoplamento entre os diferentes módulos, minimizando as dependências entre eles que, juntos, formam uma solução completa. A vantagem de adotar a modularidade reside na facilitação da compreensão do código, permitindo que os desenvolvedores se concentrem em partes específicas do sistema sem se perderem em complexidades desnecessárias.
+- **Característica com Maus-cheiros:** Os Maus-cheiros que comprometem a modularidade incluem o Método Longo e Classe Inchada. Ao adotar uma abordagem modular, é possível reduzir o Código Duplicado, isso se deve à capacidade de criar módulos reutilizáveis, os quais abrigam funcionalidades comuns, evitando assim repetições desnecessárias. Além disso a modularidade pode ser utilizada para quebrar métodos longos em menores, pois promove a implementação de métodos mais curtos e específicos, facilitando a leitura, manutenção e compreensão do código. No caso da Classe Inchada, a modularidade permite decompor uma classe com muitas responsabilidades entre diferentes módulos, evitando que uma única classe cresça excessivamente. 
+- **Operação de refatoração:** No contexto da "Classe Inchada", a estratégia de refatoração denominada "Extrair Classe" se mostra valiosa nessa situação. Ela proporciona uma maneira eficaz de lidar com o desafio de uma classe que cresceu excessivamente em tamanho e complexidade, ao dividir suas responsabilidades em classes menores e mais coesas. Ao identificar conjuntos lógicos de responsabilidades, essa técnica contribui diretamente para a criação de módulos independentes, facilitando a compreensão e manutenção do código.
+ 
 ## Extensibilidade
-- **Descrição:** A extensibilidade organiza novos códigos em espaços já existentes, balanceando as funcionalidades presentes com as futuras.
-- **Característica com Maus-cheiros:**
-  - Método longo: Ao desenvolver um código com muitas funcionalidades, podem surgir métodos que fazem mais do que deveriam.
-  - Mudanças divergentes: Um código extenso pode gerar um excesso de mudanças no que já foi desenvolvido.
-- **Operação de refatoração:**
-  - A extração de classes pode ser útil para organizar o código e deixar mais clara a responsabilidade de cada classe.
+- **Descrição:** O conceito de extensibilidade diz respeito à capacidade do código-fonte de ser ampliado e adaptado de maneira fácil para incorporar novas funcionalidades ou realizar modificações sem impactar de forma drástica a estrutura já existente. Em outras palavras, envolve a habilidade de organizar novos códigos em áreas já estabelecidas, mantendo um equilíbrio entre as funcionalidades presentes e as futuras. Códigos com extensibilidade são caracterizados pela flexibilidade, permitindo a adição de novos recursos de maneira modular.
+- **Característica com Maus-cheiros:** Um dos maus-cheiros que compromete a extensibilidade é o "Método Longo". Isso ocorre quando desenvolvemos um código rico em funcionalidades, sendo comum nos depararmos com métodos que acabam por realizar mais tarefas do que o ideal. Esse cenário não apenas compromete a clareza do código, mas também pode dificultar sua manutenção. Outro problema associado à extensibilidade é a ocorrência de "Mudanças Divergentes". Em códigos extensos, é possível que as alterações necessárias se tornem numerosas e se desdobrem em diferentes partes do código já desenvolvido. Isso não apenas aumenta a complexidade, mas também torna as mudanças mais propensas a erros.
+- **Operação de refatoração:** Quando se trata de operações de refatoração para mitigar esses desafios, a "Extração de Classes" surge como uma ferramenta valiosa. Essa técnica permite organizar o código de maneira mais estruturada, esclarecendo as responsabilidades de cada classe.
 
 ## Ausência de Duplicidades
-- **Descrição:** A ausência de duplicidades proporciona elegância e simplicidade ao código ao não possuir trechos redundantes.
-- **Característica com Maus-cheiros:**
-  - Código duplicado: O código duplicado é o inverso do tópico abordado, pois a ausência de duplicidades não deve apresentar esse mau-cheiro.
-- **Operação de refatoração:**
-  - A refatoração de "Extrair Função" pode ser utilizada para transformar um código utilizado em vários locais em uma função que pode ser chamada no local.
+- **Descrição:** A ausência de duplicidades está associada à organização do código de modo a evitar repetições desnecessárias e promover a criação de módulos independentes e interconectados. A eliminação de duplicidades proporciona elegância e simplicidade ao código ao não possuir trechos redundantes, mas também facilita a manutenção, uma vez que alterações podem ser realizadas em módulos isoladamente.
+- **Característica com Maus-cheiros:** A importância da ausência de duplicidade no design de software é evidente ao considerar os maus cheiros de código, como o "Código Duplicado". A duplicação de código é o inverso do tópico abordado, pois a ausência de duplicidades não deve apresentar esse mau-cheiro, a eliminação adequada de duplicidades permite encapsular funcionalidades compartilhadas em módulos reutilizáveis, evitando a duplicação.
+- **Operação de refatoração:** A refatoração de "Extrair Função" é uma estratégia eficaz na refatoração de código para lidar com a presença de duplicação de código, pode ser utilizada para transformar um código utilizado em vários locais em uma função que pode ser chamada no local. Essa prática não apenas elimina a duplicação, mas também contribui para a legibilidade e manutenibilidade, uma vez que a lógica compartilhada é centralizada em um único local.
+
